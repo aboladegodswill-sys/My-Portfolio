@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b6fe9b4f96.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="pgone" id="home">
+        <nav>
+            <div class="left"><img src="./assets/logo.jpg" alt="" loading="lazy">
+                <p>EYESPARK TECH HUB </p>
+            </div>
+            <div>
+                <ul class="sidebar">
+                    <li onclick="hideSidebar()"><button><i class="fa-solid fa-xmark"></i></button></li>
+                    <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa-solid fa-address-card"></i> About </a></li>
+                    <li><a href="#projects"><i class="fa-solid fa-list-check"></i>Projects Gallery</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-phone-volume"></i>Contact</a></li>
+
+                </ul>
+                <ul class="right">
+                    <li class="hideOnMobile"><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li class="hideOnMobile"><a href="#about"><i class="fa-solid fa-address-card"></i> About </a></li>
+                    <li class="hideOnMobile"><a href="#projects"><i class="fa-solid fa-list-check"></i>My Portfolio</a>
+                    </li>
+                    <li class="hideOnMobile"><a href="#contact"><i class="fa-solid fa-phone-volume"></i>Contact</a></li>
+                    <li onclick="showSidebar()"><button><i class="fa-solid fa-bars"></i></button></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="lefttext">
+                <div class="dtext">
+                    <span class="big">Elevate</span> <br>
+                    <span class="bigger">Your </span><br>
+                    <span class="biggest">Brand</span> <br>
+                </div>
+                <div class="buttons">
+                    <a href="https://linkedin.com/in/godswill-abolade-779068371" class="btn-1">Hire Me</a>
+                    <a href="https://wa.me/2349011402784" target="_blank" class="btn">Lets Talk <i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="rightrobot">
+                <iframe src="https://my.spline.design/genkubgreetingrobot-hp9ohZmNlpL8aDuCjtZeqf8S/" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+    <div class="pgtwo" id="about">
+        <div class="founderimg">
+            <img src="./assets/founder.jpg" alt="" loading="lazy">
+        </div>
+        <div class="righttext">
+            <h1>About Me</h1>
+            <p>Hello! I’m Godswill Abolade, a creative designer and web developer passionate about turning ideas into
+                powerful visual experiences.
+
+                With 3 years of experience in graphics design, I’ve worked on logos, branding, and marketing materials
+                that connect with audiences and leave lasting impressions. Over the last 1 year as a web designer, I’ve
+                specialized in building clean, modern, and responsive websites that balance functionality with great
+                design.
+
+                I also create animated video adverts that combine motion graphics and storytelling to capture attention
+                and bring brands to life. My mission is simple: to transform ideas into designs that not only look good
+                but also communicate effectively.
+
+                Let’s collaborate to craft visuals, websites, and adverts that truly stand out.</p>
+            <a href="/assets/MY CV.docx" class="btn-2">Download CV</a>
+        </div>
+    </div>
+    <div class="pgthree">
+        <section id="projects" class="pprojects">
+            <p class="mygallery">My Portfolio</p>
+            <div class="videocontainer">
+                <div class="pfolio">
+                    <a href="./assets/projects/Blue White Liquid Creative Portfolio Graphic Designer Presentation.mp4">
+                        <video
+                            src="./assets/projects/Blue White Liquid Creative Portfolio Graphic Designer Presentation.mp4"
+                            muted loop onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0;">
+                        </video>
+                    </a>
+                </div>
+                <p>Explore my creative journey through stunning visuals and engaging designs—check out my portfolio
+                    showcasing my skills, passion, and style.</p>
+                <a href="./assets/projects/Blue White Liquid Creative Portfolio Graphic Designer Presentation.mp4"
+                    class="btn-2">Check Here</a>
+            </div>
+            <div class="grid-container">
+                <div class="animatedvid">
+                    <a href="./assets/projects/videoanimation.mp4" class="grid-item item-1">
+                        <video src="./assets/projects/videoanimation.mp4" muted loop onmouseover="this.play()"
+                            onmouseout="this.pause(); this.currentTime=0;" width="800">
+                        </video>
+                    </a>
+                    <p>An animated introduction showcasing who I am, my creative journey, skills, passion, and the vision behind my work.</p>
+                </div>
+                <a href="assets/projects/design6.jpeg" class="grid-item item-2"><img
+                        src="./assets/projects/design6.jpeg" alt=""></a>
+                <a href="assets/projects/design4.jpeg" class="grid-item item-3"><img
+                        src="./assets/projects/design4.jpeg" alt=""></a>
+                <a href="assets/projects/design5.jpeg" class="grid-item item-4"><img src="assets/projects/design5.jpeg"
+                        alt=""></a>
+                <a href="assets/projects/design2.png" class="grid-item item-5"><img src="assets/projects/design2.png"
+                        alt=""></a>
+            </div>
+        </section>
+    </div>
+    <div class="pgfour">
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>I'd love to hear from you! Let's connect 👇</p>
+            <div class="contact-links">
+                <a href="mailto:aboladegodswill@gmail.com" class="btn">Email Me <i class="fa-brands fa-google"></i></a>
+                <a href="https://wa.me/2349011402784" target="_blank" class="btn">WhatsApp <i
+                        class="fa-brands fa-whatsapp"></i></a>
+                <a href="tel:+2349011402784" class="btn">Call Me</a>
+            </div>
+        </section>
+    </div>
+</body>
+
+<footer style="display: flex; justify-content: center; padding: 20px; background-color: rgb(24, 1, 1);">
+    &copy; 2025 EYESPARK TECH HUB. All rights reserved.
+</footer>
+<script>
+    const video = document.getElementById('projects-video');
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play();  // play when section is visible
+                } else {
+                    video.pause(); // pause when section is not visible
+                }
+            });
+        },
+        { threshold: 0.5 } // trigger when 50% of section is visible
+    );
+
+    observer.observe(document.getElementById('projects'));
+
+</script>
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+</script>
+
+</html>
