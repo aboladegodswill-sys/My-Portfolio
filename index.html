@@ -88,8 +88,8 @@
                     <a href="./assets/projects/Blue White Liquid Creative Portfolio Graphic Designer Presentation.mp4">
                         <video
                             src="./assets/projects/Blue White Liquid Creative Portfolio Graphic Designer Presentation.mp4"
-                            muted loop onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0;">
-                        </video>
+                            muted playsinline preload="metadata" loop
+                        ></video>
                     </a>
                 </div>
                 <p>Explore my creative journey through stunning visuals and engaging designs—check out my portfolio
@@ -100,20 +100,15 @@
             <div class="grid-container">
                 <div class="animatedvid">
                     <a href="./assets/projects/videoanimation.mp4" class="grid-item item-1">
-                        <video src="./assets/projects/videoanimation.mp4" muted loop onmouseover="this.play()"
-                            onmouseout="this.pause(); this.currentTime=0;" width="800">
-                        </video>
+                        <video src="./assets/projects/videoanimation.mp4" muted playsinline preload="metadata" loop class="autoplay-mobile"></video>
                     </a>
-                    <p>An animated introduction showcasing who I am, my creative journey, skills, passion, and the vision behind my work.</p>
+                    <p class="anviddes">An animated introduction showcasing who I am, my creative journey, skills, passion, and the vision behind my work.</p>
+                    <a href="./assets/projects/videoanimation.mp4" class="btn-2">Check Here</a>
                 </div>
-                <a href="assets/projects/design6.jpeg" class="grid-item item-2"><img
-                        src="./assets/projects/design6.jpeg" alt=""></a>
-                <a href="assets/projects/design4.jpeg" class="grid-item item-3"><img
-                        src="./assets/projects/design4.jpeg" alt=""></a>
-                <a href="assets/projects/design5.jpeg" class="grid-item item-4"><img src="assets/projects/design5.jpeg"
-                        alt=""></a>
-                <a href="assets/projects/design2.png" class="grid-item item-5"><img src="assets/projects/design2.png"
-                        alt=""></a>
+                <a href="assets/projects/design6.jpeg" class="grid-item item-2"><img src="assets/projects/design6.jpeg" alt=""></a>
+                <a href="assets/projects/design4.jpeg" class="grid-item item-3"><img src="assets/projects/design4.jpeg" alt=""></a>
+                <a href="assets/projects/design5.jpeg" class="grid-item item-4"><img src="assets/projects/design5.jpeg" alt=""></a>
+                <a href="assets/projects/design2.png" class="grid-item item-5"><img src="assets/projects/design2.png" alt=""></a>
             </div>
         </section>
     </div>
@@ -134,34 +129,56 @@
 <footer style="display: flex; justify-content: center; padding: 20px; background-color: rgb(24, 1, 1);">
     &copy; 2025 EYESPARK TECH HUB. All rights reserved.
 </footer>
+
 <script>
-    const video = document.getElementById('projects-video');
+// Function to hide the sidebar
+function hideSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'none';
+}
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    video.play();  // play when section is visible
-                } else {
-                    video.pause(); // pause when section is not visible
-                }
-            });
-        },
-        { threshold: 0.5 } // trigger when 50% of section is visible
-    );
+// Add event listener to body for mouse enter
+document.body.addEventListener('mouseenter', hideSidebar);
 
-    observer.observe(document.getElementById('projects'));
+// Only enable viewport autoplay for small screens (mobile)
+if (window.matchMedia('(max-width:480px)').matches) {
+  const videoSel = '.grid-item video, .pfolio video, .videocontainer video';
+  const vids = Array.from(document.querySelectorAll(videoSel));
 
+  vids.forEach(v => {
+    v.muted = true;
+    v.playsInline = true;
+    v.setAttribute('muted','');
+    v.setAttribute('playsinline','');
+    // keep paused until observed
+    v.pause();
+  });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const v = entry.target;
+      if (entry.isIntersecting) {
+        v.play().catch(()=>{}); // ignore play promise rejection
+      } else {
+        v.pause();
+      }
+    });
+  }, { threshold: 0.6 }); // adjust threshold as needed
+
+  vids.forEach(v => io.observe(v));
+
+} else {
+  // Desktop: play on hover, pause on mouse leave
+  const videoSel = '.grid-item video, .pfolio video, .videocontainer video';
+  const vids = Array.from(document.querySelectorAll(videoSel));
+
+  vids.forEach(v => {
+    const container = v.closest('a') || v.closest('div');
+    if (container) {
+      container.addEventListener('mouseenter', () => v.play().catch(()=>{}));
+      container.addEventListener('mouseleave', () => v.pause());
+    }ld: 0.6 }); // adjust threshold as needed
+  });
+}forEach(v => io.observe(v));
 </script>
-<script>
-    function showSidebar() {
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'flex'
-    }
-    function hideSidebar() {
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'none'
-    }
-</script>
-
 </html>
