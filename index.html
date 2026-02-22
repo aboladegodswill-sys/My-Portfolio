@@ -138,8 +138,17 @@ function hideSidebar() {
   sidebar.style.display = 'none';
 }
 
-// Add event listener to body for mouse enter
-document.body.addEventListener('mouseenter', hideSidebar);
+// Function to show the sidebar
+function showSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'flex';
+}
+
+// Close sidebar when clicking on a link
+const sidebarLinks = document.querySelectorAll('.sidebar a');
+sidebarLinks.forEach(link => {
+  link.addEventListener('click', hideSidebar);
+});
 
 // Only enable viewport autoplay for small screens (mobile)
 if (window.matchMedia('(max-width:480px)').matches) {
