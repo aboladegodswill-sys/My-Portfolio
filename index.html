@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eyespark Tech Hub</title>
-    <link rel="icon" href="assets/Untitled design (1).png" type="image/png"> 
+    <link rel="icon" href="assets/Untitled design (1).png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,7 @@
             <div class="left"><img src="./assets/logo.jpg" alt="" loading="lazy">
                 <p>EYESPARK TECH HUB </p>
             </div>
+
             <div>
                 <ul class="sidebar">
                     <li onclick="hideSidebar()"><button><i class="fa-solid fa-xmark"></i></button></li>
@@ -59,6 +60,9 @@
 
         </div>
     </div>
+    <div class="sticky">
+        <a href="https://wa.me/2349011402784" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
     <div class="pgtwo" id="about">
         <div class="founderimg">
             <img src="./assets/founder.jpg" alt="" loading="lazy">
@@ -81,37 +85,43 @@
             <a href="/assets/MY CV.docx" class="btn-2">Download CV</a>
         </div>
     </div>
+
     <div class="pgthree">
         <section id="projects" class="pprojects">
             <p class="mygallery">My Portfolio</p>
             <div class="videocontainer">
                 <div class="pfolio">
                     <a href="./assets/projects/video.mp4">
-                        <video
-                            src="./video.mp4"
-                            muted playsinline preload="metadata" loop
-                        ></video>
+                        <video src="./video.mp4" muted playsinline preload="metadata" loop></video>
                     </a>
                 </div>
                 <p>Explore my creative journey through stunning visuals and engaging designs—check out my portfolio
                     showcasing my skills, passion, and style.</p>
-                <a href="./video.mp4"
-                    class="btn-2">Check Here</a>
+                <a href="./video.mp4" class="btn-2">Check Here</a>
             </div>
             <div class="grid-container">
                 <div class="animatedvid">
                     <a href="./assets/projects/videoanimation.mp4" class="grid-item item-1">
-                        <video src="./assets/projects/videoanimation.mp4" muted playsinline preload="metadata" loop class="autoplay-mobile"></video>
+                        <video src="./assets/projects/videoanimation.mp4" muted playsinline preload="metadata" loop
+                            class="autoplay-mobile"></video>
                     </a>
-                    <p class="anviddes">An animated introduction showcasing who I am, my creative journey, skills, passion, and the vision behind my work.</p>
+                    <p class="anviddes">An animated introduction showcasing who I am, my creative journey, skills,
+                        passion, and the vision behind my work.</p>
                     <a href="./assets/projects/videoanimation.mp4" class="btn-2">Check Here</a>
                 </div>
-                <a href="assets/projects/design6.jpeg" class="grid-item item-2"><img src="assets/projects/design6.jpeg" alt=""></a>
-                <a href="assets/projects/design4.jpeg" class="grid-item item-3"><img src="assets/projects/design4.jpeg" alt=""></a>
-                <a href="assets/projects/design5.jpeg" class="grid-item item-4"><img src="assets/projects/design5.jpeg" alt=""></a>
-                <a href="assets/projects/design2.png" class="grid-item item-5"><img src="assets/projects/design2.png" alt=""></a>
+                <a href="assets/projects/design6.jpeg" class="grid-item item-2"><img src="assets/projects/design6.jpeg"
+                        alt=""></a>
+                <a href="assets/projects/design4.jpeg" class="grid-item item-3"><img src="assets/projects/design4.jpeg"
+                        alt=""></a>
+                <a href="assets/projects/design5.jpeg" class="grid-item item-4"><img src="assets/projects/design5.jpeg"
+                        alt=""></a>
+                <a href="assets/projects/design2.png" class="grid-item item-5"><img src="assets/projects/design2.png"
+                        alt=""></a>
             </div>
         </section>
+    </div>
+    <div class="works">
+        
     </div>
     <div class="pgfour">
         <section id="contact">
@@ -127,72 +137,80 @@
     </div>
 </body>
 
-<footer style="display: flex; justify-content: center; padding: 20px; background-color: rgb(24, 1, 1);">
-    &copy; 2025 EYESPARK TECH HUB. All rights reserved.
+<footer class="footer">
+    <div class="socials">
+        <a href="https://x.com/GodswillAbolade"><img src="" alt=""><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/aboladegodswill-sys"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/godswill-abolade-779068371"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.tiktok.com/@eyespark1"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/aboladegodswill"><i class="fa-brands fa-square-instagram"></i></a>
+    </div>
+    <p class="copyright">&copy; 2025 EYESPARK TECH HUB. All rights reserved.</p>
 </footer>
 
 <script>
-// Function to hide the sidebar
-function hideSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.style.display = 'none';
-}
-
-// Function to show the sidebar
-function showSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.style.display = 'flex';
-}
-
-// Close sidebar when clicking on a link
-const sidebarLinks = document.querySelectorAll('.sidebar a');
-sidebarLinks.forEach(link => {
-  link.addEventListener('click', hideSidebar);
-});
-
-// Only enable viewport autoplay for small screens (mobile)
-if (window.matchMedia('(max-width:480px)').matches) {
-  const videoSel = '.grid-item video, .pfolio video, .videocontainer video';
-  const vids = Array.from(document.querySelectorAll(videoSel));
-
-  vids.forEach(v => {
-    v.muted = true;
-    v.playsInline = true;
-    v.setAttribute('muted','');
-    v.setAttribute('playsinline','');
-    // keep paused until observed
-    v.pause();
-  });
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const v = entry.target;
-      if (entry.isIntersecting) {
-        v.play().catch(()=>{}); // ignore play promise rejection
-      } else {
-        v.pause();
-      }
-    });
-  }, { threshold: 0.6 }); // adjust threshold as needed
-
-  vids.forEach(v => io.observe(v));
-
-} else {
-  // Desktop: play on hover, pause on mouse leave
-  const videoSel = '.grid-item video, .pfolio video, .videocontainer video';
-  const vids = Array.from(document.querySelectorAll(videoSel));
-
-  vids.forEach(v => {
-    const container = v.closest('a') || v.closest('div');
-    if (container) {
-      container.addEventListener('mouseenter', () => {
-        v.play().catch(()=>{}); // Play video on hover
-      });
-      container.addEventListener('mouseleave', () => {
-        v.pause(); // Pause video on mouse leave
-      });
+    // Function to hide the sidebar
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
     }
-  });
-}
+
+    // Function to show the sidebar
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+    }
+
+    // Close sidebar when clicking on a link
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', hideSidebar);
+    });
+
+    // Only enable viewport autoplay for small screens (mobile)
+    if (window.matchMedia('(max-width:480px)').matches) {
+        const videoSel = '.grid-item video, .pfolio video, .videocontainer video';
+        const vids = Array.from(document.querySelectorAll(videoSel));
+
+        vids.forEach(v => {
+            v.muted = true;
+            v.playsInline = true;
+            v.setAttribute('muted', '');
+            v.setAttribute('playsinline', '');
+            // keep paused until observed
+            v.pause();
+        });
+
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const v = entry.target;
+                if (entry.isIntersecting) {
+                    v.play().catch(() => { }); // ignore play promise rejection
+                } else {
+                    v.pause();
+                }
+            });
+        }, { threshold: 0.6 }); // adjust threshold as needed
+
+        vids.forEach(v => io.observe(v));
+
+    } else {
+        // Desktop: play on hover, pause on mouse leave
+        const videoSel = '.grid-item video, .pfolio video, .videocontainer video';
+        const vids = Array.from(document.querySelectorAll(videoSel));
+
+        vids.forEach(v => {
+            const container = v.closest('a') || v.closest('div');
+            if (container) {
+                container.addEventListener('mouseenter', () => {
+                    v.play().catch(() => { }); // Play video on hover
+                });
+                container.addEventListener('mouseleave', () => {
+                    v.pause(); // Pause video on mouse leave
+                });
+            }
+        });
+    }
 </script>
+
 </html>
