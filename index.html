@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eyespark Tech Hub</title>
+    <link rel="icon" href="assets/Untitled design (1).png" type="image/png"> 
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,7 +86,7 @@
             <p class="mygallery">My Portfolio</p>
             <div class="videocontainer">
                 <div class="pfolio">
-                    <a href="./assets/projects/Blue White Liquid Creative Portfolio Graphic Designer Presentation.mp4">
+                    <a href="./assets/projects/video.mp4">
                         <video
                             src="./video.mp4"
                             muted playsinline preload="metadata" loop
@@ -175,10 +176,14 @@ if (window.matchMedia('(max-width:480px)').matches) {
   vids.forEach(v => {
     const container = v.closest('a') || v.closest('div');
     if (container) {
-      container.addEventListener('mouseenter', () => v.play().catch(()=>{}));
-      container.addEventListener('mouseleave', () => v.pause());
-    }ld: 0.6 }); // adjust threshold as needed
+      container.addEventListener('mouseenter', () => {
+        v.play().catch(()=>{}); // Play video on hover
+      });
+      container.addEventListener('mouseleave', () => {
+        v.pause(); // Pause video on mouse leave
+      });
+    }
   });
-}forEach(v => io.observe(v));
+}
 </script>
 </html>
