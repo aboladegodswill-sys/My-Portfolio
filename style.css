@@ -502,14 +502,14 @@ nav {
   font-size: 20px;
   font-family: "Audiowide", sans-serif;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .videocontainer p {
   color: white;
   font-size: 28px;
   font-family: "Audiowide", sans-serif;
-  text-align: center;
-  justify-self: flex-start;
+  text-align: justify;
 }
 
 .videocontainer a {
@@ -602,15 +602,15 @@ nav {
   right: 20px;
   color: white;
   background-color: black;
-  outline: 1px solid #504f4f;
+  outline: 1.5px solid #6d6c6c;
   border-radius: 8px;
   text-decoration: none;
   font-size: 45px;
   padding: 7px;
   z-index: 1000;
   font-weight: lighter;
-  transition: all 0.4s ease;
   animation: bounce 3s infinite ease-in-out;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, outline 0.4s ease;
 }
 
 @keyframes bounce {
@@ -782,6 +782,7 @@ nav {
     font-size: 28px;
     margin-bottom: 10px;
     justify-self: center;
+    align-items: center;
   }
 
   .grid-container {
@@ -915,7 +916,7 @@ nav {
   right: 20px;
   color: white;
   background-color: black;
-  outline: 1px solid #504f4f;
+  outline: 1.5px solid #868585;
   border-radius: 8px;
   text-decoration: none;
   font-size: 28px;
