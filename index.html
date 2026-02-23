@@ -26,7 +26,8 @@
                     <li onclick="hideSidebar()"><button><i class="fa-solid fa-xmark"></i></button></li>
                     <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li><a href="#about"><i class="fa-solid fa-address-card"></i> About </a></li>
-                    <li><a href="#projects"><i class="fa-solid fa-list-check"></i>Projects Gallery</a></li>
+                    <li><a href="#projects"><i class="fa-solid fa-list-check"></i>My Portfolio</a></li>
+                    <li><a href="#specialization"><i class="fa-solid fa-star"></i>Specialization</a></li>
                     <li><a href="#contact"><i class="fa-solid fa-phone-volume"></i>Contact</a></li>
 
                 </ul>
@@ -35,8 +36,9 @@
                     <li class="hideOnMobile"><a href="#about"><i class="fa-solid fa-address-card"></i> About </a></li>
                     <li class="hideOnMobile"><a href="#projects"><i class="fa-solid fa-list-check"></i>My Portfolio</a>
                     </li>
+                    <li class="hideOnMobile"><a href="#specialization"><i class="fa-solid fa-star"></i>Specialization</a></li>
                     <li class="hideOnMobile"><a href="#contact"><i class="fa-solid fa-phone-volume"></i>Contact</a></li>
-                    <li onclick="showSidebar()"><button><i class="fa-solid fa-bars"></i></button></li>
+                    <li class="showOnMobile" onclick="showSidebar()"><button><i class="fa-solid fa-bars"></i></button></li>
                 </ul>
             </div>
         </nav>
@@ -95,7 +97,7 @@
                         <video src="./video.mp4" muted playsinline preload="metadata" loop></video>
                     </a>
                 </div>
-                <p>Explore my creative journey through stunning visuals and engaging designs—check out my portfolio
+                <p class="anviddes">Explore my creative journey through stunning visuals and engaging designs—check out my portfolio
                     showcasing my skills, passion, and style.</p>
                 <a href="./video.mp4" class="btn-2">Check Here</a>
             </div>
@@ -120,8 +122,27 @@
             </div>
         </section>
     </div>
-    <div class="works">
-
+    <div class="works" id="specialization">
+        <h2>My Specialization</h2>
+        <p>Discover my expertise in graphic design, web design, and motion design. I create compelling visuals, responsive websites, and engaging animations that elevate brands and captivate audiences.</p>
+        <div class="cards">
+            <a href="graphicsdesign.html" class="card">
+                <img src="./assets/graphicsdesign.jpg" alt="" width="100%" height="200px">
+                <h3>Graphic Design</h3>
+                <p>Crafting compelling visuals that communicate your brand's message and captivate your audience.</p>
+            </a>
+            <a href="webdesign.html" class="card">
+                <img src="./assets/webdesign.jpg" alt=""width="100%" height="200px">
+                <h3>Web Design</h3>
+                <p>Building responsive, user-friendly websites that blend aesthetics with functionality for an
+                    exceptional online presence.</p>
+            </a>
+            <a href="motiondesign.html" class="card">
+                <img src="./assets/motiondesign.jpg" alt="" width="100%" height="200px">
+                <h3>Motion Design</h3>
+                <p>Animating ideas and concepts into dynamic, engaging experiences that captivate audiences and enhance brand storytelling.</p>
+            </a>
+        </div>
     </div>
     <div class="pgfour">
         <section id="contact">
