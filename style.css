@@ -701,7 +701,7 @@ nav {
   }
 
   .content {
-    margin-top: 90px;
+    margin-top: 125px;
     flex-direction: column;
     text-align: center;
   }
@@ -711,8 +711,7 @@ nav {
   }
 
   .rightrobot {
-    width: 80vw;
-    height: 55vh;
+    display: none;
   }
 
   .grid-container {
